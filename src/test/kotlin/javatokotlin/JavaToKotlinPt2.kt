@@ -102,7 +102,6 @@ class ConstructorsAndMethodsWithNamedArguments {
 	                           age: Int,
 	                           name: String?/*("?") means this variable is nullable*/,
 	                           department: Department): Employee {
-		//in-line If statement. This replaces Java's "? :"
 		return Employee(number, age, department, name)
 	}
 }
@@ -131,5 +130,7 @@ fun companionObjectAccess() {
 }
 
 fun createEmployee(number: Int, age: Int, employeeName: String?, isDev: Boolean = true): Employee {
+	
+	//in-line If statement. This replaces Java's "? :"
 	return Employee(number, age, if (isDev) Department.DEV else Department.NOT_DEV, employeeName)
 }
