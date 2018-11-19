@@ -145,9 +145,9 @@ class JoinToString {
 		
 		println("Limiting number of elements: ${numbers.joinToString(limit = 3)}")
 		
-		println("Rounding using transform(): ${numbers.joinToString(transform = {round(it).toString()})}")
-		
 		println("Limiting number of elements And setting truncate: ${numbers.joinToString(limit = 3, truncated = "etc.")}")
+		
+		println("Rounding using transform(): ${numbers.joinToString(transform = {round(it).toString()})}")
 		
 		println("Specifying everything: ${numbers.joinToString(separator = " ~ ", prefix = "{", postfix = "}", transform = {round(it).toString()}, limit = 3, truncated = "etc.")}")
 	}
