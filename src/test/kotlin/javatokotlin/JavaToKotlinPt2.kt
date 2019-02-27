@@ -28,26 +28,26 @@ class EmployeeTest {
 	@Test
 	fun demonstrateCopy() {
 		val dave = Employee(7, 23, Department.NOT_DEV, "Dave")
-		println(dave) //”javatokotlin.Employee(number=7, age=23, department=NOT_DEV, name=Dave)”
+		println(dave) //”Employee(number=7, age=23, department=NOT_DEV, name=Dave)”
 		
 		val alsoDave = dave.copy()
-		println(alsoDave) //”javatokotlin.Employee(number=7, age=23, department=NOT_DEV, name=Dave)”
+		println(alsoDave) //”Employee(number=7, age=23, department=NOT_DEV, name=Dave)”
 		println(dave == alsoDave) //true
 		
 		val john = dave.copy(number = 8, name = "John") //named arguments are covered a bit later
-		println(john) //”javatokotlin.Employee(number=8, age=23, department=NOT_DEV, name=John)”
+		println(john) //”Employee(number=8, age=23, department=NOT_DEV, name=John)”
 		println(dave == john) //false
 	}
 }
 
 class ConstructorsWithDefaultArgsDemonstration {
 	@Test
-	fun demonstrateDefaltArgs() {
+	fun demonstrateDefaultArgs() {
 		val bongani = Employee(4, 38, Department.DEV, "Bongani")
-		println(bongani) //”javatokotlin.Employee(number=4, age=38, department=DEV, name=Bongani)”
+		println(bongani) //”Employee(number=4, age=38, department=DEV, name=Bongani)”
 		
 		val namelessEmployee = Employee(4, 38, Department.DEV)
-		println(namelessEmployee) //javatokotlin.Employee(number=4, age=38, department=DEV, name=null)
+		println(namelessEmployee) //Employee(number=4, age=38, department=DEV, name=null)
 	}
 }
 
@@ -61,8 +61,8 @@ class VehicleTest {
 	
 	@Test
 	fun createVehicle() {
-		val vehicle = Vehicle("Tesla", "javatokotlin.Moonshot", 2020)
-		println(vehicle) //"javatokotlin.Vehicle(model=Tesla, make=javatokotlin.Moonshot, year=2020, registration=Unregistered, ownerName=null)"
+		val vehicle = Vehicle("Tesla", "Moonshot", 2020)
+		println(vehicle) //"Vehicle(model=Tesla, make=Moonshot, year=2020, registration=Unregistered, ownerName=null)"
 	}
 }
 
@@ -85,7 +85,7 @@ open class Vehicle2(val model: String,
                     var registration: String = "Unregistered",
                     var ownerName: String? = null)
 
-class Moonshot(override var year: Int) : Vehicle2("Tesla", "javatokotlin.Moonshot", year) //no registrationName or ownerName
+class Moonshot(override var year: Int) : Vehicle2("Tesla", "Moonshot", year) //no registrationName or ownerName
 
 class ConstructorsAndMethodsWithNamedArguments {
 	
