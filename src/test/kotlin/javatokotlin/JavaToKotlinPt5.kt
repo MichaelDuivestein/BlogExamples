@@ -19,7 +19,7 @@ class VanillaBuildEmployeeDemonstration {
 		employeeBuilder.number = 13
 		employeeBuilder.age = 46
 		employeeBuilder.department = Department.NOT_DEV
-		employeeBuilder.name = "Mark"
+		employeeBuilder.name = "Jaim"
 		return employeeBuilder.buildEmployee()
 	}
 	
